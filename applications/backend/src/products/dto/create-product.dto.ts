@@ -9,4 +9,7 @@ export class CreateProductDto {
 
   @IsString()
   description: string
+
+  @IsString()
+  requestedByAccountId: string
 }

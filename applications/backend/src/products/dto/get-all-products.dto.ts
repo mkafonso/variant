@@ -1,9 +1,6 @@
 import { IsString } from 'class-validator'
 
-export class GetProductDto {
-  @IsString()
-  productId: string
-
+export class GetAllProductsDto {
   @IsString()
   requestedByAccountId: string
 }

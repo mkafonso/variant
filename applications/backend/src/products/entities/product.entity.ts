@@ -2,6 +2,7 @@ import { createId } from '@paralleldrive/cuid2'
 
 export class Product {
   public id: string
+  public ownerId: string
   public name: string
   public url: string
   public description: string
@@ -10,6 +11,7 @@ export class Product {
 
   constructor(
     id: string,
+    ownerId: string,
     name: string,
     url: string,
     description: string,
@@ -17,6 +19,7 @@ export class Product {
     createdAt: Date,
   ) {
     this.id = id
+    this.ownerId = ownerId
     this.name = name
     this.url = url
     this.description = description
@@ -28,11 +31,12 @@ export class Product {
     name: string,
     url: string,
     description: string,
+    userId: string,
   ): Product {
     const apiKey = 'api-key-gerado-de-forma-magica'
     const id = createId()
     const createdAt = new Date()
 
-    return new Product(id, name, url, description, apiKey, createdAt)
+    return new Product(id, userId, name, url, description, apiKey, createdAt)
   }
 }
