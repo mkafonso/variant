@@ -19,7 +19,7 @@ export class DeleteAccountService {
       throw new NotFoundException('account not found')
     }
 
-    const hasPermission = data.accountId !== data.requestedByAccountId
+    const hasPermission = data.accountId === data.requestedByAccountId
     if (!hasPermission) {
       throw new UnauthorizedException('missing permission')
     }

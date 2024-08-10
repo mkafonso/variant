@@ -14,6 +14,10 @@ export class MemoryAccountsRepository implements AccountsRepositoryInterface {
     return newAccount
   }
 
+  async delete(id: string): Promise<void> {
+    this.accounts.delete(id)
+  }
+
   async getByEmail(email: string): Promise<Account | null> {
     for (const account of this.accounts.values()) {
       if (account.email === email) {
@@ -22,5 +26,9 @@ export class MemoryAccountsRepository implements AccountsRepositoryInterface {
     }
 
     return null
+  }
+
+  async getById(id: string): Promise<Account | null> {
+    return this.accounts.get(id) ?? null
   }
 }
