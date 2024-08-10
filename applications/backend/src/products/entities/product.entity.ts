@@ -31,12 +31,12 @@ export class Product {
     name: string,
     url: string,
     description: string,
-    userId: string,
+    ownerId: string,
   ): Product {
     const apiKey = 'api-key-gerado-de-forma-magica'
     const id = createId()
     const createdAt = new Date()
 
-    return new Product(id, userId, name, url, description, apiKey, createdAt)
+    return new Product(id, ownerId, name, url, description, apiKey, createdAt)
   }
 }
