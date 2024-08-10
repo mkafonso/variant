@@ -1,6 +1,5 @@
 import { MemoryAccountsRepository } from '../../__tests__'
 import { CreateAccountService } from './create-account.service'
-import { MakeCreateAccountService } from './factories'
 
 describe('CreateAccountService', () => {
   let accountsRepository: MemoryAccountsRepository
@@ -8,7 +7,7 @@ describe('CreateAccountService', () => {
 
   beforeEach(() => {
     accountsRepository = new MemoryAccountsRepository()
-    service = MakeCreateAccountService.create(accountsRepository)
+    service = new CreateAccountService(accountsRepository)
   })
 
   it('should create a new account', async () => {

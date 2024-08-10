@@ -1,6 +1,5 @@
 import { makeAccount, MemoryAccountsRepository } from '../../__tests__'
 import { DeleteAccountService } from './delete-account.service'
-import { MakeDeleteAccountService } from './factories'
 
 describe('DeleteAccountService', () => {
   let accountsRepository: MemoryAccountsRepository
@@ -8,7 +7,7 @@ describe('DeleteAccountService', () => {
 
   beforeEach(() => {
     accountsRepository = new MemoryAccountsRepository()
-    service = MakeDeleteAccountService.create(accountsRepository)
+    service = new DeleteAccountService(accountsRepository)
   })
 
   it('should delete an session', async () => {

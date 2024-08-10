@@ -1,6 +1,5 @@
 import { makeAccount, MemoryAccountsRepository } from '../../__tests__'
 import { CreateSessionService } from './create-session.service'
-import { MakeCreateSessionService } from './factories'
 
 describe('CreateSessionService', () => {
   let accountsRepository: MemoryAccountsRepository
@@ -8,7 +7,7 @@ describe('CreateSessionService', () => {
 
   beforeEach(() => {
     accountsRepository = new MemoryAccountsRepository()
-    service = MakeCreateSessionService.create(accountsRepository)
+    service = new CreateSessionService(accountsRepository)
   })
 
   it('should create a new session', async () => {
