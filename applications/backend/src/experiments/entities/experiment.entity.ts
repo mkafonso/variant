@@ -2,8 +2,8 @@ import { createId } from '@paralleldrive/cuid2'
 
 export class Experiment {
   public id: string
+  public productId: string
   public name: string
-  public url: string
   public description: string
   public status: 'active' | 'inactive'
   public variations: { [key: string]: number }
@@ -12,8 +12,8 @@ export class Experiment {
 
   constructor(
     id: string,
+    productId: string,
     name: string,
-    url: string,
     description: string,
     status: 'active' | 'inactive',
     variations: { [key: string]: number },
@@ -21,8 +21,8 @@ export class Experiment {
     updatedAt: Date,
   ) {
     this.id = id
+    this.productId = productId
     this.name = name
-    this.url = url
     this.description = description
     this.status = status
     this.variations = variations
@@ -32,10 +32,10 @@ export class Experiment {
 
   public static create(
     name: string,
-    url: string,
     description: string,
     status: 'active' | 'inactive' = 'active',
     variations: { [key: string]: number } = {},
+    productId: string,
   ): Experiment {
     const id = createId()
     const createdAt = new Date()
@@ -43,8 +43,8 @@ export class Experiment {
 
     return new Experiment(
       id,
+      productId,
       name,
-      url,
       description,
       status,
       variations,
