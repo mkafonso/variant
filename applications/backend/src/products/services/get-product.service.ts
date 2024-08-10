@@ -1,15 +1,16 @@
 import { Injectable } from '@nestjs/common'
 
+import { GetProductDto } from '../dto'
 import { ProductsRepositoryInterface } from '../repositories'
 
 @Injectable()
-export class GetAllProductsService {
+export class GetProductService {
   constructor(
     private readonly productsRepository: ProductsRepositoryInterface,
   ) {}
 
-  async execute() {
-    const products = await this.productsRepository.getAll()
-    return products
+  async execute(data: GetProductDto) {
+    const product = await this.productsRepository.getById(data.productId)
+    return product
   }
 }
