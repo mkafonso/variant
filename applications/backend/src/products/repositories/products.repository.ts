@@ -4,4 +4,6 @@ export abstract class ProductsRepositoryInterface {
   abstract create(data: Product): Promise<Product>
 
   abstract getByUrl(url: string): Promise<Product | null>
+
+  abstract getAll(): Promise<Product[]>
 }

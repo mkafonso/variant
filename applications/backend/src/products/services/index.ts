@@ -1,3 +1,2 @@
 export * from './create-product.service'
-export * from './delete-account.service'
-export * from './create-session.service'
+export * from './get-all-products.service'
