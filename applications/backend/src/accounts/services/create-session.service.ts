@@ -1,5 +1,5 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common'
-import bcrypt from 'bcryptjs'
+import * as bcrypt from 'bcryptjs'
 
 import { CreateSessionDto } from '../dto'
 import { AccountsRepositoryInterface } from '../repositories'
@@ -13,7 +13,7 @@ export class CreateSessionService {
   async execute(data: CreateSessionDto) {
     const account = await this.accountsRepository.getByEmail(data.email)
     if (!account) {
-      throw new UnauthorizedException('missing permission')
+      throw new UnauthorizedException('invalid credentials')
     }
 
     const isPasswordValid = await bcrypt.compare(
@@ -21,7 +21,7 @@ export class CreateSessionService {
       account.password,
     )
     if (!isPasswordValid) {
-      throw new UnauthorizedException('missing permission')
+      throw new UnauthorizedException('invalid credentials')
     }
 
     return {

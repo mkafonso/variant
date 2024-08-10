@@ -1,4 +1,5 @@
 import { createId } from '@paralleldrive/cuid2'
+import * as bcrypt from 'bcryptjs'
 
 export class Account {
   public id: string
@@ -26,10 +27,10 @@ export class Account {
     email: string,
     password: string,
   ): Promise<Account> {
-    // const hashedPassword = await bcrypt.hash(password, 12)
+    const hashedPassword = await bcrypt.hash(password, 12)
     const id = createId()
     const createdAt = new Date()
 
-    return new Account(id, name, email, password, createdAt)
+    return new Account(id, name, email, hashedPassword, createdAt)
   }
 }
