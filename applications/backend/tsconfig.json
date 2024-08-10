@@ -1,0 +1,3 @@
+{
+  "extends": "@variant/typescript-config/node.json",
+}
