@@ -26,7 +26,9 @@ export class GetAllExperimentsService {
       throw new NotFoundException('product not found')
     }
 
-    const products = await this.experimentsRepository.getAll()
+    const products = await this.experimentsRepository.getAllByProductId(
+      data.productId,
+    )
     return products
   }
 }

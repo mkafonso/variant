@@ -7,5 +7,5 @@ export abstract class ProductsRepositoryInterface {
 
   abstract getByUrl(url: string): Promise<Product | null>
 
-  abstract getAll(): Promise<Product[]>
+  abstract getAllByAccountId(accountId: string): Promise<Product[]>
 }

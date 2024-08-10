@@ -19,7 +19,9 @@ export class GetAllProductsService {
       throw new NotFoundException('account not found')
     }
 
-    const products = await this.productsRepository.getAll()
+    const products = await this.productsRepository.getAllByAccountId(
+      data.requestedByAccountId,
+    )
     return products
   }
 }

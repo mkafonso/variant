@@ -5,7 +5,7 @@ export abstract class ExperimentsRepositoryInterface {
 
   abstract delete(id: string): Promise<void>
 
-  abstract getAll(): Promise<Experiment[]>
+  abstract getAllByProductId(productId: string): Promise<Experiment[]>
 
   abstract getById(id: string): Promise<Experiment | null>
 }
