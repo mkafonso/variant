@@ -33,12 +33,6 @@
 
     --ring: 215 20.2% 65.1%;
 
-    --chart-1: 173 58% 39%;
-    --chart-2: 12 76% 61%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-
     --radius: 0.5rem;
   }
 
@@ -74,12 +68,6 @@
 
     --ring: 212 80% 69%;
 
-    --chart-1: 173 58% 39%;
-    --chart-2: 12 76% 61%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-
     --radius: 0.5rem;
   }
 }
@@ -88,8 +76,10 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+
     font-feature-settings:
       "rlig" 1,
       "calt" 1;

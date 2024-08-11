@@ -1,0 +1,22 @@
+{
+  "authentication": {
+    "register": {
+      "seo": {
+        "title": "Cadastre-se | Experimentos A/B Simplificados",
+        "description": "Crie uma nova conta para começar a testar suas ideias, otimizar produtos e tomar decisões baseadas em dados. Com nosso sistema, você pode criar e gerenciar experimentos, acompanhar métricas e colaborar com sua equipe de forma eficiente."
+      },
+      "alreadyRegistered": "Já tenho conta",
+      "title": "Criar nova conta",
+      "description": "Crie uma nova conta para começar a testar suas ideias",
+      "nameLabel": "Nome completo",
+      "namePlaceholder": "Digite teu nome completo",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "Digite teu e-mail",
+      "passwordLabel": "Senha",
+      "passwordPlaceholder": "Digite tua senha",
+      "btnContinueWithEmail": "Criar conta",
+      "orContinueWith": "Ou",
+      "btnContinueWithGithub": "Continuar com Github"
+    }
+  }
+}
