@@ -34,7 +34,7 @@ describe('CreateSessionService', () => {
         password: account.password,
       })
     } catch (error: any) {
-      expect(error.message).toBe('invalid credentials')
+      expect(error.message).toBe('invalidCredentialsError')
     }
   })
 
@@ -48,7 +48,7 @@ describe('CreateSessionService', () => {
         password: 'wrongPassword',
       })
     } catch (error: any) {
-      expect(error.message).toBe('invalid credentials')
+      expect(error.message).toBe('invalidCredentialsError')
     }
   })
 })

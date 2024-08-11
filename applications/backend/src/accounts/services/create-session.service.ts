@@ -13,7 +13,7 @@ export class CreateSessionService {
   async execute(data: CreateSessionDto) {
     const account = await this.accountsRepository.getByEmail(data.email)
     if (!account) {
-      throw new UnauthorizedException('invalid credentials')
+      throw new UnauthorizedException('invalidCredentialsError')
     }
 
     const isPasswordValid = await bcrypt.compare(
@@ -21,7 +21,7 @@ export class CreateSessionService {
       account.password,
     )
     if (!isPasswordValid) {
-      throw new UnauthorizedException('invalid credentials')
+      throw new UnauthorizedException('invalidCredentialsError')
     }
 
     return {
