@@ -1,4 +1,11 @@
 {
+  "error": {
+    "requiredFiedError": "Campo obrigatório",
+    "invalidFieldError": "Campo inválido",
+    "shortPasswordError": "Senha precisa ter, no mínimo, 8 caracteres",
+    "emailAlreadyTakenError": "O email já está sendo utilizado",
+    "internalServerError": "Estamos resolvendo o problema. Tente de novo dentro de alguns instantes."
+  },
   "authentication": {
     "register": {
       "seo": {

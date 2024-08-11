@@ -13,7 +13,7 @@ export class CreateAccountService {
   async execute(data: CreateAccountDto) {
     const isEmailTaken = await this.accountsRepository.getByEmail(data.email)
     if (isEmailTaken) {
-      throw new ConflictException('email already taken')
+      throw new ConflictException('emailAlreadyTakenError')
     }
 
     const account = await Account.create(data.name, data.email, data.password)

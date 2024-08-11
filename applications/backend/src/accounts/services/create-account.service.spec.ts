@@ -40,7 +40,7 @@ describe('CreateAccountService', () => {
         password: 'anotherpassword',
       })
     } catch (error: any) {
-      expect(error.message).toBe('email already taken')
+      expect(error.message).toBe('emailAlreadyTakenError')
     }
   })
 })
