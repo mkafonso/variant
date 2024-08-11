@@ -8,7 +8,7 @@ export function Header() {
   const t = useTranslations('header')
 
   return (
-    <header className="container mx-auto px-0 flex items-center justify-between border-b py-4">
+    <header className="container bg-background mx-auto flex items-center justify-between border-b py-4 sticky top-0">
       <div className="flex items-center gap-4">
         <Link href="/">
           <Image

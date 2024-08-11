@@ -7,9 +7,10 @@ const config: Omit<Config, "content"> = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      // padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '1200px',
+        // '2xl': '1400px',
       },
     },
     extend: {
