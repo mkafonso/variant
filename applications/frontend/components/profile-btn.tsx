@@ -23,9 +23,9 @@ export function ProfileBtnNavigation() {
           </span>
         </div>
 
-        <Avatar>
+        <Avatar className="rounded-md">
           <AvatarImage src="https://github.com/mkafonso.png" />
-          <AvatarFallback>DD</AvatarFallback>
+          <AvatarFallback className="rounded-md">DD</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
 

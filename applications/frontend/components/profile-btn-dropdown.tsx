@@ -50,7 +50,13 @@ export function ProfileBtnNavigationDropdown() {
 
       <DropdownMenuItem>
         <Button className="w-full" size="sm">
-          {t('linkGithub')}
+          <a
+            target="_blank"
+            href="https://github.com/mkafonso/variant"
+            rel="noopener noreferrer"
+          >
+            {t('linkGithub')}
+          </a>
         </Button>
       </DropdownMenuItem>
     </DropdownMenuContent>

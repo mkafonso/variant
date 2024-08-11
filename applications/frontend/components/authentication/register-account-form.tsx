@@ -116,7 +116,7 @@ export function RegisterAccountForm(props: PageProps) {
         </Button>
 
         {!state.success && state.message && (
-          <span className="text-sm text-rose-500">{state.message}</span>
+          <span className="text-sm text-rose-500 block">{state.message}</span>
         )}
       </form>
 
