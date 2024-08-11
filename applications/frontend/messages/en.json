@@ -17,6 +17,23 @@
       "btnContinueWithEmail": "Criar conta",
       "orContinueWith": "Ou",
       "btnContinueWithGithub": "Continuar com Github"
+    },
+    "login": {
+      "seo": {
+        "title": "Login | Acesso à Plataforma de Experimentos A/B",
+        "description": "Crie uma nova conta para começar a testar suas ideias, otimizar produtos e tomar decisões baseadas em dados. Com nosso sistema, você pode criar e gerenciar experimentos, acompanhar métricas e colaborar com sua equipe de forma eficiente."
+      },
+      "createAccount": "Criar nova conta",
+      "title": "Entrar na minha conta",
+      "description": "Faça login para acessar seus experimentos A/B",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "Digite teu e-mail",
+      "passwordLabel": "Senha",
+      "passwordPlaceholder": "Digite tua senha",
+      "forgotPassword": "Esqueci minha senha",
+      "btnContinueWithEmail": "Entrar na minha conta",
+      "orContinueWith": "Ou",
+      "btnContinueWithGithub": "Continuar com Github"
     }
   }
 }
