@@ -1,6 +1,10 @@
 {
   "error": {
-    "emailAlreadyTakenError": "O email já está sendo utilizado",
+    "requiredFiedError": "Campo obrigatório.",
+    "invalidFieldError": "Campo inválido.",
+    "shortPasswordError": "Senha precisa ter, no mínimo, 8 caracteres.",
+    "emailAlreadyTakenError": "O email já está sendo utilizado.",
+    "invalidCredentialsError": "Credenciais inválidas. Tente novamente.",
     "internalServerError": "Estamos resolvendo o problema. Tente de novo dentro de alguns instantes."
   },
   "authentication": {
@@ -38,6 +42,12 @@
       "btnContinueWithEmail": "Entrar na minha conta",
       "orContinueWith": "Ou",
       "btnContinueWithGithub": "Continuar com Github"
+    }
+  },
+  "dashboard": {
+    "seo": {
+      "title": "Variant | Gerenciar experimentos A/B",
+      "description": "Explore e gerencie todos os seus experimentos em um único lugar. Acompanhe o desempenho de variantes, visualize resultados em tempo real e colabore com sua equipe para otimizar produtos e maximizar o impacto. Comece um novo experimento ou analise o sucesso dos testes anteriores."
     }
   }
 }
