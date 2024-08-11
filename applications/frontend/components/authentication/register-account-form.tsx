@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useActionState } from 'react'
 
-import { createAccountPasswordAction } from '../../actions/action'
+import { createAccountPasswordAction } from '../../actions'
 
 type PageProps = {
   locale: string
