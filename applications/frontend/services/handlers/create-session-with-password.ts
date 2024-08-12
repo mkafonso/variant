@@ -11,6 +11,7 @@ interface CreateSessionWithPasswordResponse {
     name: string
     email: string
   }
+  token: string
 }
 
 export async function createSessionWithPassword(

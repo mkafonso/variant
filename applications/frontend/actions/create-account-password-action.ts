@@ -1,6 +1,7 @@
 'use server'
 
 import { HTTPError } from 'ky'
+import { redirect } from 'next/navigation'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { z } from 'zod'
 
@@ -42,5 +43,5 @@ export async function createAccountPasswordAction(_: unknown, data: FormData) {
     return { success: false, message: t('internalServerError'), errors: null }
   }
 
-  return { success: true, message: null, errors: null }
+  redirect(`/${locale}/login`)
 }

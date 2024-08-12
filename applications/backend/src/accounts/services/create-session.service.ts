@@ -1,4 +1,5 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common'
+import { JwtService } from '@nestjs/jwt'
 import * as bcrypt from 'bcryptjs'
 
 import { CreateSessionDto } from '../dto'
@@ -8,6 +9,7 @@ import { AccountsRepositoryInterface } from '../repositories'
 export class CreateSessionService {
   constructor(
     private readonly accountsRepository: AccountsRepositoryInterface,
+    private readonly jwtService: JwtService,
   ) {}
 
   async execute(data: CreateSessionDto) {
@@ -24,12 +26,16 @@ export class CreateSessionService {
       throw new UnauthorizedException('invalidCredentialsError')
     }
 
+    const payload = { sub: account.id }
+    const token = await this.jwtService.signAsync(payload)
+
     return {
       account: {
         id: account.id,
         name: account.name,
         email: account.email,
       },
+      token,
     }
   }
 }
