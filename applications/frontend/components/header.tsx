@@ -4,7 +4,11 @@ import { useTranslations } from 'next-intl'
 
 import { ProfileBtnNavigation } from './profile-btn'
 
-export function Header() {
+type Props = {
+  locale: string
+}
+
+export function Header(props: Props) {
   const t = useTranslations('header')
 
   return (
@@ -23,7 +27,7 @@ export function Header() {
         <span className="font-semibold">{t('logo.title')}</span>
       </div>
 
-      <ProfileBtnNavigation />
+      <ProfileBtnNavigation {...props} />
     </header>
   )
 }

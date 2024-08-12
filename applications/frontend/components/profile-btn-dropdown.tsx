@@ -7,17 +7,28 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from '@variant/ui/components/dropdown-menu'
+import { deleteCookie } from 'cookies-next'
 import { Moon, Power, Sun } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
 
-export function ProfileBtnNavigationDropdown() {
-  const { setTheme, theme } = useTheme()
+type Props = {
+  locale: string
+}
 
+export function ProfileBtnNavigationDropdown(props: Props) {
+  const { setTheme, theme } = useTheme()
+  const router = useRouter()
   const t = useTranslations('header')
 
   function toggleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  function handleLogout() {
+    deleteCookie('variant:token')
+    router.push(`${props.locale}/login`)
   }
 
   return (
@@ -42,7 +53,10 @@ export function ProfileBtnNavigationDropdown() {
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
 
-      <DropdownMenuItem className="flex items-center justify-between">
+      <DropdownMenuItem
+        className="flex items-center justify-between"
+        onClick={handleLogout}
+      >
         <span>{t('linkLogout')}</span>
         <Power className="size-4 text-red-600 dark:text-red-500" />
       </DropdownMenuItem>

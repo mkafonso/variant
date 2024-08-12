@@ -19,7 +19,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
 
   return (
     <div>
-      <Header />
+      <Header locale={params.locale} />
       <main className="pb-4 pt-10">{children}</main>
     </div>
   )

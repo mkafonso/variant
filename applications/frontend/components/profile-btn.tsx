@@ -10,7 +10,11 @@ import {
 
 import { ProfileBtnNavigationDropdown } from './profile-btn-dropdown'
 
-export function ProfileBtnNavigation() {
+type Props = {
+  locale: string
+}
+
+export function ProfileBtnNavigation(props: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-3 outline-none">
@@ -29,7 +33,7 @@ export function ProfileBtnNavigation() {
         </Avatar>
       </DropdownMenuTrigger>
 
-      <ProfileBtnNavigationDropdown />
+      <ProfileBtnNavigationDropdown {...props} />
     </DropdownMenu>
   )
 }
