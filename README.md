@@ -7,7 +7,7 @@ Ele permite que os administradores cadastrem experimentos, definam variantes, e 
 
 - React 19
 - Turborepo
-- NestJS
+- NestJS (Estou usando repositório em memória, mas depois adiciono o Postgres com Prisma)
 - Next.js + next-intl
 
 ### Funcionalidades
