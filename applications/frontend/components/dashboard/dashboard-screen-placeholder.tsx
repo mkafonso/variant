@@ -6,34 +6,26 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 import { AddNewSite } from './add-new-site'
-import { DashboardScreenPlaceholder } from './dashboard-screen-placeholder'
-import { SiteList } from './site-list'
 
-export function DashboardScreen() {
+export function DashboardScreenPlaceholder() {
   const t = useTranslations('dashboard')
   const [addSiteDialog, setAddSiteDialog] = useState(false)
 
-  if (![].length) {
-    return <DashboardScreenPlaceholder />
-  }
-
   return (
     <Dialog open={addSiteDialog} onOpenChange={setAddSiteDialog}>
-      <div className="w-full space-y-6 container">
-        <div className="flex items-center justify-between">
-          <div className="space-y-2">
-            <h1 className="text-2xl font-semibold tracking-tight">
-              {t('title')}
-            </h1>
-            <p className="text-sm text-muted-foreground">{t('description')}</p>
-          </div>
+      <div className="flex container h-[450px] mx-auto shrink-0 items-center justify-center rounded-md border border-dashed">
+        <div className="flex flex-col mx-auto max-w-[420px] shrink-0 items-center justify-center">
+          <h3 className="mt-4 text-lg font-semibold">
+            {t('placeholderTitle')}
+          </h3>
+          <p className="mb-4 mt-2 text-sm text-center text-muted-foreground">
+            {t('placeholderDescription')}
+          </p>
 
           <Button onClick={() => setAddSiteDialog(true)} type="submit">
             {t('newProduct')}
           </Button>
         </div>
-
-        <SiteList />
       </div>
 
       <AddNewSite setAddSiteDialog={setAddSiteDialog} />

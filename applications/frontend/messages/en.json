@@ -63,6 +63,19 @@
     },
     "newProduct": "Novo site",
     "title": "Meus sites ou projetos",
-    "description": "Lista dos projetos (sites) cadastrados na minha conta"
+    "description": "Lista dos projetos (sites) cadastrados na minha conta",
+    "addNewProductTitle": "Criar novo site",
+    "addNewProductDescription": "Crie novo site para gerenciar seus experimentos A/B",
+    "addNewProductNameLabel": "Nome do site",
+    "addNewProductNamePlaceholder": "Digite o nome do site",
+     "addNewProductUrlLabel": "URL do site",
+    "addNewProductUrlPlaceholder": "Digite a url do site",
+    "addNewProductDescriptionLabel": "Descrição do site",
+    "addNewProductDescriptionPlaceholder": "Digite a descrição do site",
+    "addNewProductDescriptionMaxLength": "*Máx. 150 caracteres",
+    "btnAddNewProductCancel": "Cancelar",
+    "btnAddNewProductSave": "Adicionar novo site",
+    "placeholderTitle": "Teus sites aparecerão aqui",
+    "placeholderDescription": "Você não tem nenhum site cadastrado aqui. Cadastre o teu primeiro site para testar experimentos A/B"
   }
 }
