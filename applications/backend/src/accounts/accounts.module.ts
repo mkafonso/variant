@@ -8,6 +8,7 @@ import {
   CreateAccountService,
   CreateSessionService,
   DeleteAccountService,
+  GetProfileFromTokenService,
 } from './services'
 
 @Module({
@@ -24,6 +25,7 @@ import {
     CreateAccountService,
     DeleteAccountService,
     CreateSessionService,
+    GetProfileFromTokenService,
     {
       provide: AccountsRepositoryInterface,
       useClass: MemoryAccountsRepository,
